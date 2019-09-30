@@ -1,24 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import './MainNavigation/MainNavigation';
+import Toolbar from '@material-ui/core/Toolbar';
+import MainNavigation from './MainNavigation/MainNavigation';
+import Posts from './Posts/Posts';
+import Footer from './Footer/Footer';
 
-function App() {
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+  root: {
+    flexGrow:1,
+    padding:25,
+    background:"pink"
+  },
+  list: {
+    background: "aliceblue",
+  },
+  title:{
+    flexGrow:1,
+  },
+});
+
+
+
+
+
+
+const App = () => {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppBar className={classes.root}>
+        <Toolbar>
+          <Typography className={classes.title} variant="h3" >
+          MaterialUI demo
+          </Typography>
+          <MainNavigation className={classes.list} />
+        </Toolbar>
+      </AppBar>
+      <Posts />
+      <Footer />
     </div>
   );
 }
