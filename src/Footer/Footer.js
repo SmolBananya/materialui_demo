@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   TextField,
   Typography,
@@ -33,23 +34,22 @@ const useStyles = makeStyles({
   },
   footer:{
     boxSizing: "border-box"
-
-
-  }
+  },
+  link:{
+    textDecoration: "none"
+}
 });
 
 const footerItems = [
     {
         text:"Contacts",
+        path:"/contact",
         id:1
     },
     {
         text:"About",
-    id:2
-},
-{
-    text:"FAQ",
-    id:3
+        path:"/about",
+        id:2
 },
 ]
 
@@ -74,8 +74,8 @@ const Footer = () => {
                 <ListItem className={classes.footer} key={item.id}>
                     <ListItemText>
                     <Typography>
-                    {item.text}
-                </Typography>
+                    <Link className={classes.link} to={item.path}>{item.text}</Link>
+                    </Typography>
                     </ListItemText>
                 </ListItem>
             ))}
