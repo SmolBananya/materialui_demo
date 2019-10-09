@@ -5,7 +5,9 @@ import Typography from "@material-ui/core/Typography";
 import "./MainNavigation/MainNavigation";
 import Toolbar from "@material-ui/core/Toolbar";
 import MainNavigation from "./MainNavigation/MainNavigation";
-import Posts from "./Posts/Posts";
+import Posts from "./Posts";
+import Post from './post';
+import postdata from './postdata';
 import Footer from "./Footer/Footer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -79,10 +81,12 @@ const App = () => {
             <MainNavigation className={classes.list} />
           </Toolbar>
         </AppBar>
+
         <Switch>
           <Route exact path="/" component={Posts} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path={`/:postId`} render={ (props) => <Post data={postdata} {...props} />} />
         </Switch>
         <Footer />
       </Router>
