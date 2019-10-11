@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/materialui_demo/static/css/main.b100e6da.chunk.css",
+    "main.js": "/materialui_demo/static/js/main.e9dbe344.chunk.js",
+    "main.js.map": "/materialui_demo/static/js/main.e9dbe344.chunk.js.map",
+    "runtime-main.js": "/materialui_demo/static/js/runtime-main.66be0787.js",
+    "runtime-main.js.map": "/materialui_demo/static/js/runtime-main.66be0787.js.map",
+    "static/js/2.19dc37a4.chunk.js": "/materialui_demo/static/js/2.19dc37a4.chunk.js",
+    "static/js/2.19dc37a4.chunk.js.map": "/materialui_demo/static/js/2.19dc37a4.chunk.js.map",
+    "index.html": "/materialui_demo/index.html",
+    "precache-manifest.4e8f672cbf19a1db502fc64fa1067270.js": "/materialui_demo/precache-manifest.4e8f672cbf19a1db502fc64fa1067270.js",
+    "service-worker.js": "/materialui_demo/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/materialui_demo/static/css/main.b100e6da.chunk.css.map"
+  }
+}
